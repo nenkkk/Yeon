@@ -115,3 +115,15 @@ class DjangoSession(models.Model):
     class Meta:
         managed = False
         db_table = 'django_session'
+
+class Guestbook(models.Model):
+    guest_idx = models.IntegerField(blank=True, null=True)
+    guest_memo = models.TextField(blank=True, null=True)
+    guest_name = models.CharField(max_length=50, blank=True, null=True)
+    guest_sequrity = models.CharField(max_length=50, blank=True, null=True)
+    guest_ip = models.CharField(max_length=50, blank=True, null=True)
+    guest_regdate = models.DateField(blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'guestbook'

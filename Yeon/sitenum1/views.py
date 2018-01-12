@@ -20,3 +20,13 @@ def login(request):
     else:
         form = LoginForm()
         return render(request, 'sitenum1/index.html')
+
+def show_guest(request):
+    
+    return render(request,'sitenum1/guest.html')
+
+def show_sign(request):
+    
+    return HttpResponse('하단 풋2')
+    
+        
