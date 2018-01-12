@@ -16,7 +16,7 @@ def login(request):
         if user is not None:
             return HttpResponse('로그인성공 짝짝짝')
         else:
-            return HttpResponse('로그인 실패. 다시 시도 해보세요.')
+            return HttpResponse('로그인 실패. 다시 시도 해보세요.!!!')
     else:
         form = LoginForm()
         return render(request, 'sitenum1/index.html')
