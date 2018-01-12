@@ -1,0 +1,79 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Yeon</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static 'sitenum1/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="{% static 'sitenum1/vendor/metisMenu/metisMenu.min.css' %}" rel="stylesheet'">
+
+    <!-- Custom CSS -->
+    <link href="{% static 'sitenum1/dist/css/sb-admin-2.css' %}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{% static 'sitenum1/vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+
+    <!-- jQuery -->
+    <script src="{% static 'sitenum1/vendor/jquery/jquery.min.js' %}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{% static 'sitenum1/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="{% static 'sitenum1/vendor/metisMenu/metisMenu.min.js' %}"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="{% static 'sitenum1/dist/js/sb-admin-2.js' %}"></script>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+                <div class="login-panel panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">개인회원</h3>
+                    </div>
+                    <div class="panel-body">
+                            <fieldset>
+                            	<form id="loginForm" action = "login/" method = "POST">
+                   				 {% csrf_token %}
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="아이디" name="username" id="username" type="text" autofocus>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="패스워드" name="password" id="password"  type="password" value="">
+                                </div>
+                                <div class="checkbox" align="center">
+                                    <label >
+                                        <button  type="button" class="btn btn-outline btn-primary btn-lg">회원가입</button><button type="button" class="btn btn-outline btn-primary btn-lg">방명록</button>
+                                    </label>
+                                </div>
+                                <!-- Change this to a button or input when using this as a form -->
+                                <a href="#" onclick="document.getElementById('loginForm').submit();" class="btn btn-lg btn-success btn-block">로그인</a>
+                                </form>
+                            </fieldset>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+</body>
+
+</html>
