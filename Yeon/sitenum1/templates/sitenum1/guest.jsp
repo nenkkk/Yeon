@@ -1,9 +1,9 @@
-{% extends "sitenum1/layout.html" %}
+{% extends "sitenum1/layout.jsp" %}
 {% block title %}
 방명록
 {% endblock %}
 {% block content %}
-{% include "sitenum1/navi.html" %}	
+{% include "sitenum1/navi.jsp" %}	
 	<div id="page-wrapper">
         <div class="row">
             <div class="col-lg-12">
@@ -199,22 +199,27 @@
 	                    <i class="fa fa-bell fa-fw"></i> 방명록 쓰기
 	                </div>
 	                <div class="panel-body">
+	                	<form id="guestFrom" action = "guest_contents/" method = "POST">
+                   		{% csrf_token %}
                         <div class="list-group">
                             
                             <div class="form-group">
+                            	
                                 <label>이름</label>
-                                <input class="form-control" placeholder="이름">
+                                <input class="form-control" placeholder="이름" name="guestname">
                                 <label>내용</label>
-                                <textarea class="form-control" rows="5"></textarea>
+                                <textarea class="form-control" rows="5" name="guesttext"></textarea>
                                 <div class="checkbox">
                                     <label>
                                         <input type="checkbox" value=""> 비공개
                                     </label>
                                 </div>
                             </div>
+                            
                         </div>
                         <!-- /.list-group -->
-                        <a href="#" class="btn btn-default btn-block">쓰기</a>
+                        <a href="#" onclick="document.getElementById('guestFrom').submit();" class="btn btn-default btn-block">쓰기</a>
+                        </form>
                     </div>
 	            </div>
 			</div>

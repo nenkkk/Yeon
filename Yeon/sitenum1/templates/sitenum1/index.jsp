@@ -1,4 +1,4 @@
-{% extends "sitenum1/layout.html" %}
+{% extends "sitenum1/layout.jsp" %}
 {% block title %}
 Yeon
 {% endblock %}

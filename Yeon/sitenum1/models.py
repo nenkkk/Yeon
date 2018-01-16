@@ -117,7 +117,7 @@ class DjangoSession(models.Model):
         db_table = 'django_session'
 
 class Guestbook(models.Model):
-    guest_idx = models.IntegerField(blank=True, null=True)
+    guest_idx = models.AutoField(primary_key=True)
     guest_memo = models.TextField(blank=True, null=True)
     guest_name = models.CharField(max_length=50, blank=True, null=True)
     guest_sequrity = models.CharField(max_length=50, blank=True, null=True)
